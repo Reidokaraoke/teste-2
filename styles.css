@@ -498,14 +498,14 @@ h1 {
 }
 
 .rodape-mensagem span {
-    color: #FFFFFF;
-    font-size: 12px;
+    color: #020000;
+    font-size: 14px;
     font-weight: 500;
 }
 
 .botao-pedido {
-    background-color: #25d366;
-    color: white;
+    background-color: #fcfcfc;
+    color: rgb(3, 0, 0);
     border: none;
     padding: 8px 16px;
     border-radius: 50px;
@@ -520,11 +520,11 @@ h1 {
 }
 
 .botao-pedido i {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .botao-pedido:hover {
-    background-color: #128C7E;
+    background-color: #ffffff;
     transform: scale(1.05);
 }
 
