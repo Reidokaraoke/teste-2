@@ -44,65 +44,48 @@
 </head>
 <body>
 
-
-
-
-
-
- <button class="share-button" onclick="compartilharWhatsApp()">
-    &#x21AA; <!-- Símbolo de seta curva -->
-    <span class="fallback-text"></span>
-</button>
-
-
-    <!-- Cabeçalho -->
-    <div class="cabecalho-fixo">
-        <h1>
-    <span style="display: inline-block; transform: scaleX(-1);">🎤</span> 
-    Rei do KaraokÊ
-    <span style="display: inline-block; transform: scaleX(1);">🎤</span>  
-    
-</h1>
-        <input type="search" id="pesquisa" placeholder="       🔍 Digite   Aqui">
-        <div id="aviso"></div>
-
-		
-		
-<a href="favoritos.html" class="favoritos-link">
-    <span class="heart">❤️</span>
-    <span class="text">Favoritos</span>
-   <span class="counter">0</span> <!-- Contador de favoritos -->
-</a>
- 
-
-<!-- Botão de Vendas Fixo -->
-<a href="vendas.html" class="vendas-button">
-    <i class="fas fa-shopping-cart"></i> <!-- Ícone de carrinho de compras -->
-</a>
- 
- 
-        <!-- Botão de Ajuda -->
-<a href="nova_tela.html" class="help-button">?</a>
-
-    
-
-    <div class="controles-paginacao">
-    <button id="anterior">&#9664;</button> <!-- Seta para a esquerda -->
-    <span id="info-paginacao"> 1 de 1</span>
-    <button id="proximo">&#9654;</button> <!-- Seta para a direita -->
+    <div class="rodape">
+    <div class="rodape-mensagem">
+        <span>🎵 Não encontrou a canção? Mande seu pedido! 🎵</span>
+    </div>
+    <button class="botao-pedido" onclick="enviarPedidoWhatsApp()">
+        <i class="fab fa-whatsapp"></i> Solicitar Música
+    </button>
 </div>
 
- <!-- Conteúdo -->
+    <button class="share-button" onclick="compartilharWhatsApp()">
+        &#x21AA;
+        <span class="fallback-text"></span>
+    </button>
+    <div class="cabecalho-fixo">
+        <h1>
+            <span style="display: inline-block; transform: scaleX(-1);">🎤</span> 
+            LM Karaokê	
+            <span style="display: inline-block; transform: scaleX(1);">🎤</span>  
+        </h1>
+        <input type="search" id="pesquisa" placeholder="🔍 Pesquise sua música aqui">
+        <!-- Frase adicionada aqui -->
+        <div class="atualizacao-info">atualização  18 de Abril 2026</div>
+        <div id="resultado-pesquisa" class="resultado-pesquisa"></div>
+        <div id="aviso"></div>
+        <a href="favoritos.html" class="favoritos-link">
+            <span class="heart">❤️</span>
+            <span class="text">Favoritos</span>
+            <span class="counter">0</span>
+        </a>
+        <a href="vendas.html" class="vendas-button">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+        <a href="nova_tela.html" class="help-button">?</a>
+        <div class="controles-paginacao">
+            <button id="anterior">&#9664;</button>
+            <span id="info-paginacao"> 1 de 1</span>
+            <button id="proximo">&#9654;</button>
+        </div>
+    </div>
     <div class="conteudo-rolavel">
         <div id="catalogo" class="lista-simples"></div>
     </div>
-
     <script src="script.js"></script>
-	
-	
-
-	
-	
-	
 </body>
 </html>
