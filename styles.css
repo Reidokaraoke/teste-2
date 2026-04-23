@@ -7,11 +7,10 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #000303;
+    background-color: #ECF0F1;
     color: #1D6A3B;
     overflow-x: hidden;
 }
-
 
 /* Cabeçalho Fixo */
 .cabecalho-fixo-favoritos {
@@ -19,10 +18,10 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #f52804;
+    background-color: #1E90FF;
     z-index: 1500;
     padding: 0px;
-    box-shadow: 0 4px 15px rgb(0, 0, 0);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
@@ -39,39 +38,42 @@ body {
     padding: 10px;
 }
 
-
-
-
-
 /* Cabeçalho Fixo */
 .cabecalho-fixo {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #1499f1;
+    background-color: #1E90FF;
     z-index: 1000;
     padding: 0px;
-    box-shadow: 0 4px 15px rgb(0, 0, 0);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
 h1 {
-    color: #000000;
-    font-size: 1.6rem;
-    margin-bottom: 10px;
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.atualizacao-info {
+    margin-top: 0px;      /* espaço acima da frase (reduzido) */
+    margin-bottom: 5px;   /* espaço abaixo da frase */
+    font-size: 12px;      /* opcional: reduzir tamanho da fonte */
+    color: #FFFFFF;       /* mantém branco */
 }
 
 /* Campo de pesquisa */
 #pesquisa {
     width: 90%;
-    max-width: 230px;
+    max-width: 270px;
     padding: 10px;
-    font-size: 16px;
-    border: 2px solid #000000;
+    font-size: 14px;
+    border: 2px solid #666;
     border-radius: 10px;
-    background-color: white;
-    color: #000000;
+    background-color: #4a4a6a;
+    color: #FFFFFF;
     margin-bottom: 10px;
     transition: all 0.3s ease;
 }
@@ -80,6 +82,15 @@ h1 {
     border-color: black;
     box-shadow: 0 0 10px rgba(255, 111, 97, 0.8);
     outline: none;
+}
+
+/* Estilo para o resultado da pesquisa */
+.resultado-pesquisa {
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-top: 5px;
+    text-align: center;
+    display: none; /* Inicialmente oculto */
 }
 
 /* Área Rolável de Músicas */
@@ -101,7 +112,7 @@ h1 {
 }
 
 .conteudo-rolavel::-webkit-scrollbar-thumb {
-    background-color: #f1da06;
+    background-color: #1E90FF;
     border-radius: 10px;
 }
 
@@ -115,7 +126,6 @@ h1 {
     margin: 0;
 }
 
-
 /* Lista   /*  separação das musicas  */
 .lista-simples-favoritos {
     display: flex;
@@ -126,50 +136,53 @@ h1 {
     margin: 0;
 }
 
-
-
 /* Estilo para os itens da lista */
 .item-lista {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Alinha o conteúdo verticalmente */
-    padding: 25px;
+    padding: 1px;
     background-color: #FFFFFF;
     border-radius: 10px;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     cursor: pointer;
-    min-height: 70px;
+    min-height: 50px;
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: left; /* Alinha o conteúdo à esquerda */
 }
 
 /* Alinhamento dos números, cantores e músicas à esquerda */
-.numero, .cantor, .musica {
+.numero, .cantor, .musica, .genero {
     display: block; /* Garante que ocupem o espaço da linha */
     text-align: left; /* Alinha o texto à esquerda */
-    margin: 20px 0; /* Espaçamento entre as linhas */
+    margin: 1px 0; /* Espaçamento entre as linhas */
 }
 
 .numero {
-    color: #e70902;
+    color: #d9534f;
     font-weight: bold;
-    font-size: 2.0rem;
+    font-size: 1.1rem;
 }
 
 .cantor {
-    color: #000000;
+    color: #1E90FF;
     font-weight: bold;
-    font-size: 1.7rem;
+    font-size: 1.1rem;
 }
 
 .musica {
-    color: #0071db;
-    font-size: 1.7rem;
+    color: #333333;
+    font-size: 1rem;
     text-align: left; /* Garante que a música fique alinhada à esquerda */
 }
 
-
+.genero {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+   /* margin-top: 6px; */
+}
 
 /* Controles de Paginação Fixos */
 .controles-paginacao {
@@ -280,13 +293,9 @@ h1 {
 }
 
 .help-button:hover {
-    background-color: #0428f5; /* Azul mais escuro ao passar o mouse */
+    background-color: #0077CC; /* Azul mais escuro ao passar o mouse */
     transform: scale(1.1);
 }
-
-
-
-
 
 /* Botão de Vendas Fixo */
 .vendas-button {
@@ -312,7 +321,7 @@ h1 {
 
 /* Efeito hover */
 .vendas-button:hover {
-    background-color: #0544f3e8; /* Azul mais escuro ao passar o mouse */
+    background-color: #0077CC; /* Azul mais escuro ao passar o mouse */
     transform: scale(1.1); /* Aumenta o botão levemente */
 }
 
@@ -321,16 +330,13 @@ h1 {
     font-size: 24px; /* Tamanho do ícone */
 }
 
-
-
-
 /* Botão de Voltar */
 .back-button {
     position: fixed;
     bottom: 10px;
     left: 10px;
     padding: 10px 20px;
-    background-color: #1d05f5;
+    background-color: #1E90FF;
     color: white;
     border-radius: 25px;
     text-decoration: none;
@@ -342,13 +348,12 @@ h1 {
     background-color: #0077CC;
 }
 
-
 /* Botão de Favorito das músicas pagina favoritos */
 .favorito-btn {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-left: auto; /* Empurra o botão para a direita */
     padding: 0;
     transition: transform 0.2s ease-in-out;
@@ -357,8 +362,6 @@ h1 {
 .favorito-btn:hover {
     transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
 }  
-
-
 
 .favoritos-link {
     position: absolute;
@@ -371,17 +374,15 @@ h1 {
     text-decoration: none;
 }
 
-
 /* Estilo do botão coração */
 .favoritos-link .heart {
     font-size: 25px; /* Tamanho do coração */
     color: red; /* Cor do coração */
 }
 
-
 .favoritos-link .text {
-    font-size: 16px;
-    color: rgb(255, 255, 255);
+    font-size: 12px;
+    color: white;
     font-family: Arial, sans-serif;
     margin-top: 0px;
 }
@@ -389,8 +390,8 @@ h1 {
 /* Estilo do contador */
 .favoritos-link .counter {
     font-size: 15px; /* Tamanho do contador */
-    color: rgb(0, 0, 0); /* Cor do texto do contador */
-    background-color: rgb(252, 252, 252); /* Fundo vermelho */
+    color: white; /* Cor do texto do contador */
+    background-color: red; /* Fundo vermelho */
     border-radius: 50%; /* Formato circular */
     width: 25px; /* Largura do contador */
     height: 25px; /* Altura do contador */
@@ -400,11 +401,6 @@ h1 {
     text-align: center;
     font-weight: bold; /* Negrito para destacar o número */
 }
-
-
-
-
-
 
 #mensagem-favoritos {
     text-align: center; /* Centraliza o texto */
@@ -423,7 +419,6 @@ h1 {
     box-shadow: none; /* Remove a sombra */
     background: none; /* Remove o fundo completamente */
 }
-
 
 .share-button {
     position: fixed;  /* Fixa o botão na tela */
@@ -449,19 +444,17 @@ h1 {
     transform: scale(1.1);  /* Dá um efeito de aumento no botão ao passar o mouse */
 }
 
-
 /* Estilo para o coração ativo (favoritado) */
 .coracao.favorito-ativo {
     color: #FF4500; /* Vermelho claro (cor ajustável conforme preferência) */
-    font-size: 5.0rem; /* Tamanho do ícone */
+    font-size: 1.5rem; /* Tamanho do ícone */
 }
 
 /* Estilo para o coração inativo (não favoritado) */
 .coracao.favorito-inativo {
-    color: #c09e05; /* Cinza claro para indicar estado inativo */
-    font-size: 5.0rem; /* Tamanho do ícone */
+    color: #ccc; /* Cinza claro para indicar estado inativo */
+    font-size: 1.5rem; /* Tamanho do ícone */
 }
-
 
 /* Botão de Favorito das músicas pagina index */
 .botoes-item {
@@ -473,9 +466,81 @@ h1 {
 
 .favorito-btn {
     cursor: pointer;
-    font-size: 2.5em; /* Ajuste o tamanho do ícone conforme necessário */
+    font-size: 1.2em; /* Ajuste o tamanho do ícone conforme necessário */
 }
 
+
+
+
+
+
+/* Rodapé */
+.rodape {
+    position: fixed;
+    bottom: 60px;          /* acima dos botões de paginação */
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 998;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    border-top: 2px solid #ffd700;
+}
+
+.rodape-mensagem span {
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.botao-pedido {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.botao-pedido i {
+    font-size: 16px;
+}
+
+.botao-pedido:hover {
+    background-color: #128C7E;
+    transform: scale(1.05);
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 480px) {
+    .rodape {
+        bottom: 55px;
+        padding: 6px 10px;
+    }
+    
+    .rodape-mensagem span {
+        font-size: 10px;
+    }
+    
+    .botao-pedido {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+    
+    .botao-pedido i {
+        font-size: 14px;
+    }
+}
 
 
 
