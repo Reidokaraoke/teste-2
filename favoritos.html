@@ -46,7 +46,7 @@
                     favoritosContainer.innerHTML = `
                         <div id="mensagem-favoritos">
                             Nenhuma música marcada como favorita.  
-                            Experimente tocar no ❤️ para guardar suas músicas preferidas aqui.
+                            Toque no ❤️ para guardar suas músicas preferidas aqui.
                         </div>
                     `;
                     return;
@@ -58,9 +58,10 @@
                         <div class="item-lista" data-numero="${musica.numero}" data-cantor="${encodeURIComponent(musica.cantor)}" data-musica="${encodeURIComponent(musica.musica)}">
                             <!-- Conteúdo principal do item -->
                             <div class="conteudo-item">
-                                <span class="numero">${musica.numero || ''}</span>
+                               <span class="cantor">${musica.cantor || 'Artista Desconhecido'}</span>
                                 <span class="musica">${musica.musica || 'Título Desconhecido'}</span>
-                                <span class="cantor">${musica.cantor || 'Artista Desconhecido'}</span>
+                                <span class="numero">${musica.numero || ''}</span>
+                                
                             </div>
                             <!-- Botões do item -->
                             <div class="botoes-item">
@@ -82,9 +83,9 @@
                         }
 
                         // Captura os dados do item clicado
-                        const numero = this.getAttribute('data-numero');
                         const cantor = decodeURIComponent(this.getAttribute('data-cantor'));
                         const musica = decodeURIComponent(this.getAttribute('data-musica'));
+                        const numero = this.getAttribute('data-numero');
 
                         // Redireciona para a página de detalhes
                         abrirDetalhes(numero, cantor, musica);
