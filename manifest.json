@@ -1,11 +1,11 @@
 {
-    "name": "LM Karaokê catalogo eletrônico",
-    "short_name": "LM Karaokê",
+    "name": "Rei do Karaokê",
+    "short_name": "Karaokê",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#1e1e2f",
     "theme_color": "#ff6f61",
-    "description": "Catálogo completo de músicas para karaokê",
+    "description": "Catálogo de músicas para karaokê offline",
     "icons": [
         {
             "src": "icon-192x192.png",
